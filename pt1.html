@@ -30,5 +30,30 @@
     console.log(
       document.querySelector("#pai").lastElementChild.previousElementSibling
     );
+
+    // pt2
+
+    let irmaoMaisVelho = document.querySelector("#pai");
+    let irmaoMaisNovo = document.createElement("section");
+    irmaoMaisVelho.appendChild(irmaoMaisNovo);
+    console.log(document.querySelector("#pai").parentNode);
+
+    let paiDoElemento = document.querySelector("#primeiroFilhoDoFilho");
+    let filhoDoElemento = document.createElement("div");
+    paiDoElemento.appendChild(filhoDoElemento);
+    console.log(document.querySelector("#primeiroFilhoDoFilho").parentNode);
+    filhoDoElemento.className = "bisneto";
+
+    // Pt3
+    let quartoFilho = document.querySelector("#quartoEUltimoFilho");
+    let terceiroFilho = document.querySelector("#terceiroFilho");
+    let primeiroFilho = document.querySelector("#primeiroFilho");
+    let filhoDoFilho = document.querySelector("#segundoEUltimoFilhoDoFilho");
+    let paiDeTodos = document.querySelector("#paiDoPai");
+    let elemento = document.querySelector("#elementoOndeVoceEsta");
+    irmaoMaisVelho.removeChild(quartoFilho);
+    irmaoMaisVelho.removeChild(terceiroFilho);
+    irmaoMaisVelho.removeChild(primeiroFilho);
+    elemento.removeChild(filhoDoFilho);
   </script>
 </main>
